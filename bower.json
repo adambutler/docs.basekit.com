@@ -23,7 +23,8 @@
     "html5shiv": "~3.7.2",
     "pygments": "~1.6.0",
     "position-sticky-polyfill": "~0.1.1",
-    "Simple-Jekyll-Search": "https://github.com/christian-fei/Simple-Jekyll-Search.git"
+    "Simple-Jekyll-Search": "https://github.com/christian-fei/Simple-Jekyll-Search.git",
+    "zeroclipboard": "~2.1.6"
   },
   "overrides": {
     "pygments": {
