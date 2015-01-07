@@ -11,6 +11,7 @@ var cssfilter 	= filter('*.css')
 var scssfilter 	= filter('*.scss')
 var fontfilter 	= filter(['*.eot', '*.svg', '*.ttf', '.woff', '.otf'])
 var jsfilter 	= filter('*.js')
+var swffilter 	= filter('*.swf')
 
 // CSS components task
 gulp.task('css', function() {
@@ -62,6 +63,16 @@ gulp.task('js', function() {
 
 });
 
+// Flash component (for Zeroclipboard)
+gulp.task('swf', function() {
+
+	return gulp.src(mainfiles)
+
+		.pipe(swffilter)
+		.pipe(gulp.dest('js'));
+
+});
+
 
 // All assets task
-gulp.task('assets', ['css', 'sass', 'fonts', 'js'])
+gulp.task('assets', ['css', 'sass', 'fonts', 'js', 'swf'])
