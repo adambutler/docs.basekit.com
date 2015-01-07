@@ -71,3 +71,17 @@ if(document.getElementById("search-field")){
 	});
 
 }
+
+// Zero Clipboard
+
+//create client
+var clip = new ZeroClipboard.Client();
+//event
+clip.addEventListener('mousedown',function() {
+	clip.setText(document.querySelectorAll('.highlight').value);
+});
+clip.addEventListener('complete',function(client,text) {
+	alert('copied: ' + text);
+});
+//glue it to the button
+clip.glue('copy');
